@@ -1,0 +1,253 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: autos;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root{
+    --primary-SoftBlue:hsl(215, 51%, 70%);
+    --primary_cyan:hsl(178, 100%, 50%);
+
+    --secundary-VeryDarkBlue-MainBG:hsl(217, 54%, 11%);
+    --secundary-VeryDarkBlue-CardBG:hsl(216, 50%, 16%);
+    --secundary-VeryDarkBlue-Line:hsl(215, 32%, 27%);
+}
+
+
+body{
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--secundary-VeryDarkBlue-MainBG);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 350px;
+    height: 596px;
+    background-color: var(--secundary-VeryDarkBlue-CardBG);
+    border-radius: 15px; 
+    padding: 24px 24px 24px 24px;
+}    
+
+
+.image-container{
+    width: 302px;
+    height: 302px;
+}    
+
+.image-container img{
+    width: 302px;
+    height: 302px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.middle{
+    width: 302px;
+    height: 302px;
+    background-color: var(--primary_cyan);
+    opacity:0;
+    position: absolute;
+    margin-top: -302px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eye-icon{
+    width: 302px;
+    height: 302px;
+    opacity:0;
+    position: absolute;
+    margin-top: -302px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eye-icon img{
+    width: 48px;
+    height: 48px;
+}
+
+.image-container:hover .middle{
+    opacity: 0.5;
+}
+
+.image-container:hover .eye-icon{
+    opacity: 100%;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    padding-bottom: 24px;
+}
+
+h1{
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 24px;
+}
+
+.description>a{
+    text-decoration: none;
+    color: white;
+}
+
+.description>p{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
+    gap:16px;
+    color: var(--primary-SoftBlue);
+}
+
+.auction-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:110px;
+    padding-bottom: 20px;
+}
+
+.price{
+    color: var(--primary_cyan);
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.price>img{
+    width:11px;
+    height:18px;
+}
+
+.time{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--primary-SoftBlue);
+}
+
+.time>img{
+    height: 16px;
+    width:16px;
+}
+
+.auction-info img{
+    margin-right: 6px;
+}
+
+hr{
+    border: 0.5px var(--secundary-VeryDarkBlue-Line) solid;
+    background-color: var(--secundary-VeryDarkBlue-Line);
+    margin: 0;
+}
+
+.creator{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    color: var(--primary-SoftBlue);
+    padding-top: 16px;
+    padding-bottom: 32px;
+}
+
+.creator>img{
+    height: 33px;
+    width: 33px;
+    border: 1px white solid;
+    border-radius: 50%;
+}
+
+.creator>p{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.creator-Link{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover, a:active{
+    color: var(--primary_cyan);
+}
+
+
